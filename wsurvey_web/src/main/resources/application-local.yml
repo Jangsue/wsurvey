@@ -1,0 +1,8 @@
+local :
+  key : application-local
+
+logging:
+  file:
+    path: /Users/subinjang/DEV/workspace/upload/logs/wsurvey/web
+    name: wsurvey-web-local
+

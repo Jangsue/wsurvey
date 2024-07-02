@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <include resource ="org/springframework/boot/logging/logback/defaults.xml"/>
+    <include resource="org/springframework/boot/logging/logback/console-appender.xml"/>
+    <include resource="com/woongjin/pjt/core/logging/logback/file-appender.xml" />
+
+    <root>
+        <springProfile name="development">
+            <appender-ref ref="CONSOLE"/>
+            <appender-ref ref="FILE" />
+            <appender-ref ref="ERROR_FILE"/>
+        </springProfile>
+        <springProfile name="quality-assurance">
+            <appender-ref ref="FILE" />
+            <appender-ref ref="ERROR_FILE"/>
+        </springProfile>
+        <springProfile name="production">
+            <appender-ref ref="FILE" />
+            <appender-ref ref="ERROR_FILE"/>
+        </springProfile>
+    </root>
+
+</configuration>

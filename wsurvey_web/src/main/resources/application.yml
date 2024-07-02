@@ -1,0 +1,14 @@
+spring:
+  profiles:
+    group:
+      development: common,common-local,local
+      quality-assurance: common, common-qas, qas
+      production: common,common-prd,prd
+
+local :
+  local :
+    key : application
+  key : applicationkey
+
+server:
+  port: 8088

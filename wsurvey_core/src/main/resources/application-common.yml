@@ -1,0 +1,14 @@
+logging:
+  charset:
+    console: UTF-8
+    file : UTF-8
+  pattern:
+    dateformat: "yyyy-MM-dd HH:mm:ss"
+    console: "%clr([%d{logging.pattern.dateformat}]){yellow} %clr([%5p]) %clr(${PID:-}){magenta} --- %clr([%18.18t]){blue} %clr(%-40.40logger{40}){cyan} %clr([%C{2}.%M]){green} %clr(:){faint} %m %n${LOG_EXCEPTION_CONVERSION_WORD:%wEx}"
+    file: "[%d{${logging.pattern.dateformat}}] [%5p] ${PID:-} --- [%18.18t] %-40.40logger{40} : %m %n${LOG_EXCEPTION_CONVERSION_WORD:%wEx}"
+  logback:
+    rolling policy:
+      max-history: 7
+      max-file-size: 100MB
+      total-size-cap: 10GB
+      file-name-pattern: "%d{yyyy-MM-dd}.%i.gz"
